@@ -45,11 +45,11 @@ def run_matrix():
     import random
     results_class, result_dyn = [], []
     
-    for i in range(10,20):
+    for i in range(10,14):
         dims = [random.randint(10,100) for i in range(i)]
         r = elapsed_time(classic_matrixChainMultiplication, dims, 0, len(dims) - 1, text=f"Matrix chain with n = {i}")
         results_class.append(r)
-        r= elapsed_time(dyn_matrixChainMultiplication, dims, text=f"Matrix chain with n = {i}")
+        r = elapsed_time(dyn_matrixChainMultiplication, dims, text=f"Matrix chain with n = {i}")
+        result_dyn.append(r)
   
-    return (results_class, result_dyn
-        )
+    return (results_class, result_dyn)
